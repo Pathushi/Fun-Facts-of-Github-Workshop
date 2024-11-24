@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Fun Facts</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        #fact {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub Fun Facts</h1>
+    <button onclick="generateFunFact()">Generate Fun Fact</button>
+    <div id="fact"></div>
+
+    <script>
+        const funFacts = [
+            "GitHub was founded in 2008 and quickly became the largest host of source code in the world.",
+            "The Octocat is GitHub's mascot and was created by graphic designer Simon Oxley.",
+            "GitHub hosts over 100 million repositories as of 2021.",
+            "In 2018, Microsoft acquired GitHub for $7.5 billion.",
+            "GitHub's original name was Logical Awesome."
+        ];
+
+        function generateFunFact() {
+            const factElement = document.getElementById('fact');
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            factElement.textContent = funFacts[randomIndex];
+        }
+    </script>
+</body>
+</html>
